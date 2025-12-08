@@ -1,73 +1,70 @@
-# React + TypeScript + Vite
+# GreenLoop Client ���
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+The frontend application for GreenLoop, built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## ��� Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Framework**: React 19
+- **Language**: TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **State Management**: Zustand
+- **Data Fetching**: TanStack Query (React Query)
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Maps**: Leaflet / React-Leaflet
 
-## React Compiler
+## ��� Getting Started
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Node.js 18+
+- NPM or Yarn
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. Navigate to the client directory:
+   ```bash
+   cd client
+   ```
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+2. Install dependencies:
+   ```bash
+   npm install
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+3. Create `.env` file (optional, defaults are usually fine for dev):
+   ```env
+   VITE_API_URL=http://localhost:4000/api
+   ```
+
+4. Start the development server:
+   ```bash
+   npm run dev
+   ```
+
+## ��� Project Structure
+
+```
+src/
+├── assets/         # Static assets (images, svgs)
+├── components/     # Reusable UI components
+│   ├── layout/     # Header, Footer, Container
+│   └── ui/         # Buttons, Inputs, Cards, etc.
+├── hooks/          # Custom React hooks
+├── lib/            # Utilities and API clients
+├── pages/          # Page components (routes)
+│   ├── admin/      # Admin dashboard pages
+│   ├── collector/  # Collector dashboard pages
+│   ├── donor/      # Donor dashboard pages
+│   └── shared/     # Shared pages (404, etc.)
+├── stores/         # Global state (Zustand)
+└── types/          # TypeScript type definitions
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## ��� Key Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+- **Role-based Dashboards**: Distinct interfaces for Donors, Collectors, and Admins.
+- **Interactive Maps**: Location picking for donations and routing for collectors.
+- **Real-time Updates**: Status tracking for donation requests.
+- **Responsive Design**: Mobile-friendly UI using Tailwind CSS.
