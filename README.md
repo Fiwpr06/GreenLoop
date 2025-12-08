@@ -21,7 +21,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### Backend (Server)
 
 - Node.js + Express
-- Prisma ORM + PostgreSQL
+- Prisma ORM + MySQL
 - JWT Authentication
 - Google Gemini AI
 
@@ -30,7 +30,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### Prerequisites
 
 - Node.js 18+
-- PostgreSQL or MySQL
+- MySQL
 - Google AI API Key (for chatbot)
 
 ### Installation
@@ -38,8 +38,8 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 1. **Clone the repository**
 
 ```bash
-git clone https://github.com/yourusername/greenloop.git
-cd greenloop
+git clone https://github.com/Fiwpr06/GreenLoop.git
+cd GreenLoop
 ```
 
 2. **Setup Server**
