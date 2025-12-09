@@ -26,7 +26,7 @@ export const ChatBot = () => {
       id: "welcome",
       role: "bot",
       content:
-        "Xin chào! 🌱 Tôi là GreenBot, trợ lý AI của GreenLoop. Tôi có thể giúp bạn về:\n\n• Cách quyên góp rác tái chế\n• Điểm thưởng và phần thưởng\n• Các loại rác có thể tái chế\n\nBạn cần hỗ trợ gì?",
+        "Xin chào! 🌱 Tôi là GreenBot, trợ lý AI của RECYCLE CHARITY. Tôi có thể giúp bạn về:\n\n• Cách quyên góp rác tái chế\n• Điểm thưởng và phần thưởng\n• Các loại rác có thể tái chế\n\nBạn cần hỗ trợ gì?",
       timestamp: new Date(),
     },
   ]);
@@ -114,7 +114,7 @@ export const ChatBot = () => {
         id: "welcome",
         role: "bot",
         content:
-          "Xin chào! 🌱 Tôi là GreenBot, trợ lý AI của GreenLoop. Tôi có thể giúp bạn về:\n\n• Cách quyên góp rác tái chế\n• Điểm thưởng và phần thưởng\n• Các loại rác có thể tái chế\n\nBạn cần hỗ trợ gì?",
+          "Xin chào! 🌱 Tôi là GreenBot, trợ lý AI của RECYCLE CHARITY. Tôi có thể giúp bạn về:\n\n• Cách quyên góp rác tái chế\n• Điểm thưởng và phần thưởng\n• Các loại rác có thể tái chế\n\nBạn cần hỗ trợ gì?",
         timestamp: new Date(),
       },
     ]);

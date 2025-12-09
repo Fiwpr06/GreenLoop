@@ -190,7 +190,7 @@ export const RewardsPage = () => {
                       Current Balance:
                     </span>
                     <span className="text-sm font-medium">
-                      {user?.points} pts
+                      {user?.points || 0} pts
                     </span>
                   </div>
                   <div className="flex justify-between mb-2">

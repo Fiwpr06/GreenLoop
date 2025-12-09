@@ -194,7 +194,9 @@ export const AdminDashboard = () => {
               <h1 className="text-3xl font-bold text-gray-900">
                 Admin Dashboard
               </h1>
-              <p className="text-gray-500">Manage your GreenLoop platform</p>
+              <p className="text-gray-500">
+                Manage your RECYCLE CHARITY platform
+              </p>
             </div>
           </div>
         </motion.div>

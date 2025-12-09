@@ -1,4 +1,4 @@
-# GreenLoop 🌱
+# Recycle Charity 🌱
 
 A recyclable waste donation platform connecting donors with collectors. Earn points by recycling!
 
@@ -27,58 +27,44 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 
 ## Getting Started
 
-### Prerequisites
+### 1. Prerequisites
 
-- Node.js 18+
-- MySQL
-- Google AI API Key (for chatbot)
+- **Node.js**: Version 18 or higher.
+- **MySQL Server**.
 
-### Installation
+### 2. Backend Setup
 
-1. **Clone the repository**
+- Create a `.env` file and fill in the Database connection info, Cloudinary API Key, and Gemini AI API Key.
+- Run `npm install` to install dependencies.
+- Initialize the Database:
+  ```bash
+  npx prisma migrate dev --name init
+  ```
+- Update Prisma Client:
+  ```bash
+  npx prisma generate
+  ```
+- Seed the database:
+  ```bash
+  npx prisma db seed
+  ```
+- Start the server:
+  ```bash
+  npm run dev
+  ```
 
-```bash
-git clone https://github.com/Fiwpr06/GreenLoop.git
-cd GreenLoop
-```
+### 3. Frontend Setup
 
-2. **Setup Server**
-
-```bash
-cd server
-npm install
-cp .env.example .env
-# Edit .env with your database URL and API keys
-npx prisma migrate dev
-npx prisma generate
-npm run dev
-```
-
-3. **Setup Client**
-
-```bash
-cd client
-npm install
-cp .env.example .env
-npm run dev
-```
-
-4. **Open in browser**
-
-- Client: http://localhost:5173
-- Server: http://localhost:4000
+- Navigate to the `client` folder and run `npm install`.
+- Start the interface:
+  ```bash
+  npm run dev
+  ```
+- Access the browser at: http://localhost:5173.
 
 ## Environment Variables
 
 ### Server (.env)
-
-**For PostgreSQL:**
-
-```
-DATABASE_URL="postgresql://user:password@localhost:5432/greenloop_db"
-```
-
-**For MySQL:**
 
 ```
 DATABASE_URL="mysql://user:password@localhost:3306/greenloop_db"
@@ -109,23 +95,6 @@ VITE_API_URL=http://localhost:4000/api
 
 ## Database Setup
 
-### Option 1: PostgreSQL (Default)
-
-1. Install PostgreSQL
-2. Create database:
-
-```sql
-CREATE DATABASE greenloop_db;
-```
-
-3. Update `.env`:
-
-```
-DATABASE_URL="postgresql://postgres:yourpassword@localhost:5432/greenloop_db"
-```
-
-### Option 2: MySQL
-
 1. Install MySQL
 2. Create database:
 
@@ -139,23 +108,12 @@ CREATE DATABASE greenloop_db;
 DATABASE_URL="mysql://root:yourpassword@localhost:3306/greenloop_db"
 ```
 
-4. Update `prisma/schema.prisma` - change provider:
-
-```prisma
-datasource db {
-  provider = "mysql"
-  url      = env("DATABASE_URL")
-}
-```
-
-5. Run migrations:
+4. Run migrations:
 
 ```bash
 npx prisma migrate dev --name init
 npx prisma generate
 ```
-
-> **Note**: When switching databases, delete the `prisma/migrations` folder and re-run migrations.
 
 ## Project Structure
 

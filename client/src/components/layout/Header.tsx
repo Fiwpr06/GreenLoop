@@ -246,7 +246,7 @@ export const Header = () => {
                 </div>
               </motion.div>
               <span className="text-xl font-heading font-bold bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400 bg-clip-text text-transparent">
-                GreenLoop
+                RECYCLE CHARITY
               </span>
             </Link>
 
@@ -329,7 +329,7 @@ export const Header = () => {
 
                         <TrendingUp className="relative w-4 h-4 text-yellow-900" />
                         <span className="relative text-yellow-900 font-bold text-sm">
-                          {user.points.toLocaleString()}
+                          {(user.points || 0).toLocaleString()}
                         </span>
                         <Award className="relative w-4 h-4 text-yellow-900" />
                       </motion.div>
@@ -469,7 +469,7 @@ export const Header = () => {
                     >
                       <Award className="w-3 h-3 text-yellow-900" />
                       <span className="text-xs font-bold text-yellow-900">
-                        {user.points}
+                        {user.points || 0}
                       </span>
                     </Link>
                   )}
@@ -575,7 +575,7 @@ export const Header = () => {
                           <div className="flex items-center gap-2 px-3 py-1 bg-white/20 rounded-full">
                             <Award className="w-4 h-4" />
                             <span className="font-bold">
-                              {user.points.toLocaleString()}
+                              {(user.points || 0).toLocaleString()}
                             </span>
                           </div>
                         </div>

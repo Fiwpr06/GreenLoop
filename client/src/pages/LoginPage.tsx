@@ -93,7 +93,7 @@ export const LoginPage = () => {
                 <Leaf className="w-7 h-7 text-white" />
               </motion.div>
               <span className="text-2xl font-heading font-bold text-gray-900 dark:text-white">
-                GreenLoop
+                RECYCLE CHARITY
               </span>
             </Link>
 

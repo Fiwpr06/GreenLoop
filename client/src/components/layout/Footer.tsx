@@ -61,7 +61,7 @@ export const Footer = () => {
                 <Leaf className="w-6 h-6 text-white" />
               </motion.div>
               <span className="text-xl font-heading font-bold text-white">
-                GreenLoop
+                RECYCLE CHARITY
               </span>
             </div>
             <p className="text-sm text-gray-400 mb-6 leading-relaxed">
@@ -162,13 +162,13 @@ export const Footer = () => {
             <ul className="space-y-4">
               <li>
                 <a
-                  href="mailto:support@greenloop.com"
+                  href="mailto:support@recyclecharity.com"
                   className="flex items-center gap-3 text-sm text-gray-400 hover:text-green-400 transition-colors group"
                 >
                   <div className="w-10 h-10 bg-gray-800 group-hover:bg-green-500/20 rounded-xl flex items-center justify-center transition-colors">
                     <Mail className="w-4 h-4 text-green-500" />
                   </div>
-                  <span>support@greenloop.com</span>
+                  <span>support@recyclecharity.com</span>
                 </a>
               </li>
               <li>
@@ -218,7 +218,7 @@ export const Footer = () => {
           className="flex flex-col md:flex-row justify-between items-center gap-4"
         >
           <p className="text-sm text-gray-500">
-            © {currentYear} GreenLoop. All rights reserved.
+            © {currentYear} RECYCLE CHARITY. All rights reserved.
           </p>
           <p className="text-sm text-gray-500 flex items-center gap-1">
             Made with <Heart className="w-4 h-4 text-red-500 fill-red-500" />{" "}

@@ -126,7 +126,7 @@ const testimonials = [
     name: "Sarah Johnson",
     role: "Active Donor",
     content:
-      "GreenLoop made recycling so easy! I've earned over 5000 points and redeemed amazing rewards.",
+      "RECYCLE CHARITY made recycling so easy! I've earned over 5000 points and redeemed amazing rewards.",
     avatar: "👩",
     rating: 5,
   },
@@ -206,8 +206,9 @@ export const LandingPage = () => {
               </h1>
 
               <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-lg leading-relaxed">
-                Join GreenLoop - the platform connecting donors and collectors.
-                Make recycling rewarding with our points-based system.
+                Join RECYCLE CHARITY - the platform connecting donors and
+                collectors. Make recycling rewarding with our points-based
+                system.
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 mb-12">
@@ -417,7 +418,7 @@ export const LandingPage = () => {
               Why Choose Us
             </span>
             <h2 className="text-4xl md:text-5xl font-heading font-bold text-gray-900 dark:text-white mb-4">
-              Why Choose GreenLoop?
+              Why Choose RECYCLE CHARITY?
             </h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
               We make recycling easy, rewarding, and impactful
@@ -549,8 +550,8 @@ export const LandingPage = () => {
               Ready to Make a Difference?
             </h2>
             <p className="text-xl opacity-90 mb-10">
-              Join GreenLoop today and start your journey towards a greener
-              planet. Every action counts!
+              Join RECYCLE CHARITY today and start your journey towards a
+              greener planet. Every action counts!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

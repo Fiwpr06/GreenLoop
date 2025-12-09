@@ -246,7 +246,7 @@ export const HowItWorksPage = () => {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-heading font-bold text-gray-900 dark:text-white mb-6">
               How{" "}
               <span className="bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400 bg-clip-text text-transparent">
-                GreenLoop
+                RECYCLE CHARITY
               </span>{" "}
               Works
             </h1>
@@ -535,8 +535,8 @@ export const HowItWorksPage = () => {
               Ready to Make a Difference?
             </h2>
             <p className="text-xl opacity-90 mb-8">
-              Join GreenLoop today and start your journey towards a greener
-              planet. Every action counts!
+              Join RECYCLE CHARITY today and start your journey towards a
+              greener planet. Every action counts!
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

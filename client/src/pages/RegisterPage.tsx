@@ -136,7 +136,7 @@ export const RegisterPage = () => {
               <Leaf className="w-7 h-7 text-white" />
             </motion.div>
             <span className="text-2xl font-heading font-bold bg-gradient-to-r from-green-600 to-emerald-600 dark:from-green-400 dark:to-emerald-400 bg-clip-text text-transparent">
-              GreenLoop
+              RECYCLE CHARITY
             </span>
           </Link>
           <h1 className="text-3xl font-heading font-bold text-gray-900 dark:text-white mb-2">
