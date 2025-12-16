@@ -1,4 +1,4 @@
-# GreenLoop API - Recycling Platform Backend
+# Recycle Charity API - Recycling Platform Backend
 
 ## 📋 Tổng quan
 
