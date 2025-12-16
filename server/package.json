@@ -12,6 +12,9 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "seed": "ts-node src/scripts/seed.ts"
   },
+  "prisma": {
+    "seed": "ts-node src/scripts/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

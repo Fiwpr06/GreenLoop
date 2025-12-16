@@ -30,7 +30,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### Prerequisites
 
 - Node.js 18+
-- PostgreSQL or MySQL
+- PostgreSQL
 - Google AI API Key (for chatbot)
 
 ### Installation
@@ -81,7 +81,7 @@ DATABASE_URL="postgresql://user:password@localhost:5432/greenloop_db"
 **For MySQL:**
 
 ```
-DATABASE_URL="mysql://user:password@localhost:3306/greenloop_db"
+DATABASE_URL="postgresql://user:password@localhost:5432/greenloop_db"
 ```
 
 **Other variables:**
@@ -109,6 +109,7 @@ VITE_API_URL=http://localhost:4000/api
 
 ## Database Setup
 
+<<<<<<< Updated upstream
 ### Option 1: PostgreSQL (Default)
 
 1. Install PostgreSQL
@@ -127,6 +128,9 @@ DATABASE_URL="postgresql://postgres:yourpassword@localhost:5432/greenloop_db"
 ### Option 2: MySQL
 
 1. Install MySQL
+=======
+1. Install PostgreSQL
+>>>>>>> Stashed changes
 2. Create database:
 
 ```sql
@@ -136,7 +140,7 @@ CREATE DATABASE greenloop_db;
 3. Update `.env`:
 
 ```
-DATABASE_URL="mysql://root:yourpassword@localhost:3306/greenloop_db"
+DATABASE_URL="postgresql://postgres:yourpassword@localhost:5432/greenloop_db"
 ```
 
 4. Update `prisma/schema.prisma` - change provider:

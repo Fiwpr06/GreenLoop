@@ -28,7 +28,7 @@ export const addressService = {
   },
 
   create: async (userId: string, input: CreateAddressInput) => {
-    // If this is set as primary, unset other primary addresses
+    
     if (input.isPrimary) {
       await prisma.address.updateMany({
         where: { userId, isPrimary: true },
@@ -74,7 +74,6 @@ export const addressService = {
   update: async (id: string, userId: string, input: UpdateAddressInput) => {
     await addressService.findById(id, userId);
 
-    // If this is set as primary, unset other primary addresses
     if (input.isPrimary) {
       await prisma.address.updateMany({
         where: { userId, isPrimary: true, id: { not: id } },
@@ -92,7 +91,6 @@ export const addressService = {
       isPrimary: input.isPrimary,
     };
 
-    // Update source if coordinates are provided
     if (input.latitude && input.longitude) {
       addressData.source = "GEOCODED";
     }
