@@ -17,4 +17,3 @@ export const transactionService = {
     return user?.points || 0;
   },
 };
-

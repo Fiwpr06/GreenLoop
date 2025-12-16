@@ -21,7 +21,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### Backend (Server)
 
 - Node.js + Express
-- Prisma ORM + MySQL
+- Prisma ORM + PostgreSql
 - JWT Authentication
 - Google Gemini AI
 
@@ -30,7 +30,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### 1. Prerequisites
 
 - **Node.js**: Version 18 or higher.
-- **MySQL Server**.
+- **PostgreSql Server**.
 
 ### 2. Backend Setup
 
@@ -67,7 +67,7 @@ A recyclable waste donation platform connecting donors with collectors. Earn poi
 ### Server (.env)
 
 ```
-DATABASE_URL="mysql://user:password@localhost:3306/greenloop_db"
+DATABASE_URL="PostgreSql://user:password@localhost:3306/greenloop_db"
 ```
 
 **Other variables:**
@@ -95,7 +95,7 @@ VITE_API_URL=http://localhost:4000/api
 
 ## Database Setup
 
-1. Install MySQL
+1. Install PostgreSql
 2. Create database:
 
 ```sql
@@ -105,7 +105,7 @@ CREATE DATABASE greenloop_db;
 3. Update `.env`:
 
 ```
-DATABASE_URL="mysql://root:yourpassword@localhost:3306/greenloop_db"
+DATABASE_URL="PostgreSql://root:yourpassword@localhost:3306/greenloop_db"
 ```
 
 4. Run migrations:

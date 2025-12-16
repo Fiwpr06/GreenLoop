@@ -1,5 +1,5 @@
 import { prisma } from "../../lib/prisma";
-import { Prisma } from "../../generated/prisma";
+import { Prisma } from "@prisma/client";
 import {
   CreateDonationRequestInput,
   UpdateDonationRequestInput,
@@ -226,13 +226,11 @@ export const donationRequestService = {
       });
     }
 
-    // Get collector info for notification
     const collector = await prisma.user.findUnique({
       where: { id: collectorId },
       select: { fullName: true },
     });
 
-    // Create collection record and update request status in a transaction
     const result = await prisma.$transaction(
       async (tx: Prisma.TransactionClient) => {
         // Generate 6-digit OTP
@@ -304,14 +302,12 @@ export const donationRequestService = {
       });
     }
 
-    // Verify OTP
     if (request.collection.verificationCode !== input.verificationCode) {
       throw Object.assign(new Error("Invalid verification code"), {
         status: 400,
       });
     }
 
-    // Complete the donation and award points in a transaction
     const result = await prisma.$transaction(
       async (tx: Prisma.TransactionClient) => {
         const wasteCategory = await tx.wasteCategory.findUnique({
@@ -321,7 +317,6 @@ export const donationRequestService = {
         const pointsAwarded =
           input.actualWeight * (wasteCategory?.pointsPerKg || 0);
 
-        // Update collection
         await tx.collection.update({
           where: { id: request.collection!.id },
           data: {
@@ -332,7 +327,6 @@ export const donationRequestService = {
           },
         });
 
-        // Update donation request
         const updatedRequest = await tx.donationRequest.update({
           where: { id: donationRequestId },
           data: {
@@ -355,7 +349,6 @@ export const donationRequestService = {
           },
         });
 
-        // Award points to donor
         await tx.user.update({
           where: { id: request.donorId },
           data: {
@@ -365,7 +358,6 @@ export const donationRequestService = {
           },
         });
 
-        // Create transaction record
         await tx.transaction.create({
           data: {
             userId: request.donorId,

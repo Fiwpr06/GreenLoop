@@ -3,7 +3,7 @@ import jwt, { Secret, SignOptions } from "jsonwebtoken";
 import type { StringValue } from "ms";
 import { prisma } from "../../lib/prisma";
 import { LoginInput, RegisterInput } from "../../schemas/auth.schema";
-import { $Enums } from "../../generated/prisma";
+import { $Enums } from "@prisma/client";
 
 const JWT_SECRET: Secret = process.env.JWT_SECRET ?? "dev-secret";
 const expiresInEnv = process.env.JWT_EXPIRES_IN;
